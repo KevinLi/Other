@@ -4,7 +4,7 @@ breed [ fish onefish ]
 
 turtles-own [
   life       ; Time till death
-  full       ; Fullness. 0-100
+  full       ; Fullness. ~ 0-100
 ]
 
 ;##########
@@ -22,7 +22,14 @@ to makefood
 end
 
 to findfood
-  ask fish [ fd 1 ]
+  ask turtles [
+    ask patches in-radius 5 [
+      if any? patches with [ pcolor = green ] [
+        ask fish [ facexy int first ([pxcor] of patches with [pcolor = green]) int first ([pycor] of patches with [pcolor = green])
+          ]
+      ]
+    ]
+  ]
 end
 
 to eat
@@ -96,7 +103,7 @@ end
 to go
   ;##FISH##
   swim
-  ;findfood
+  findfood
   ;##FOOD##
   checkFull?
   ;##GENERAL##
@@ -185,6 +192,8 @@ This model attempts to recreate a virtual aquarium. Each fish has a life and ful
 HOW IT WORKS
 ------------
 The fish exhibit basic behavior of moving around.
+Four if statements keep the fish within the boundaries of the fish tank.
+
 
 
 HOW TO USE IT
@@ -221,7 +230,7 @@ NETLOGO FEATURES
 CREDITS AND REFERENCES
 ----------------------
 Uploaded to GitHub, will probably add changes to it once in a while.
-https://github.com/KevinLi
+https://github.com/KevinLi/Other
 @#$#@#$#@
 default
 true
