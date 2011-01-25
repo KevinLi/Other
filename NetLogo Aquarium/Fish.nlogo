@@ -25,15 +25,25 @@ to findfood
   ask turtles [
     ask patches in-radius 5 [
       if any? patches with [ pcolor = green ] [
-        ask fish [ facexy int first ([pxcor] of patches with [pcolor = green]) int first ([pycor] of patches with [pcolor = green])
+        ask fish [
+          facexy int first ([pxcor] of patches with [pcolor = green])
+                 int first ([pycor] of patches with [pcolor = green])
           ]
+        if any? turtles-here with [ shape = "fish" ] [
+          set pcolor 95
+          ask fish [
+            set life life + 50
+          ]
+        ]
+        if any? turtles-here with [ shape = "fishrev" ] [
+          set pcolor 95
+          ask fish [
+            set life life + 50
+          ]
+        ]
       ]
     ]
   ]
-end
-
-to eat
-  ask fish [ ]
 end
 
 to checkFull?
@@ -177,7 +187,7 @@ fishnum
 fishnum
 1
 4
-1
+3
 1
 1
 NIL
@@ -186,7 +196,7 @@ HORIZONTAL
 @#$#@#$#@
 WHAT IS IT?
 -----------
-This model attempts to recreate a virtual aquarium. Each fish has a life and fullness attribute, which determine when the fish will die. Feeding, which hasn't been implemented yet, will extend its lifespan.
+This model attempts to recreate a virtual aquarium. Each fish has a life and fullness attribute, which determine when the fish will die. Feeding will extend its lifespan.
 
 
 HOW IT WORKS
@@ -201,6 +211,7 @@ HOW TO USE IT
 Click the SETUP button to create a number of fish specified in the fishnum slider.
 Click the GO button to start the simulation.
 Click within the fish tank to add patches of green 'food'.
+If there are fish, they will swim towards the food.
 
 
 THINGS TO NOTICE
@@ -213,13 +224,12 @@ Because of the following code,
 
 THINGS TO TRY
 -------------
-There's not much to try.
+Click in the fish tank!
 
 
 EXTENDING THE MODEL
 -------------------
-- Make food actually work. Still confused about how to get turtles to detect patches, then move towards it.
-- Add a background.
+- Add a background. Backgrounds are cool. Can I embed an image into an nlogo file? Like Base64 encoding it or something. A lot more portable.
 
 
 NETLOGO FEATURES
