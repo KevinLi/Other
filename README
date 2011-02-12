@@ -1,10 +1,20 @@
 ﻿2011-01-25
-  NetLogo Aquarium
-    My Fall 2010 Intro to Computer Science final project.
+  NetLogo
+  Aquarium
+    My Fall 2010 Intro to Computer Science final project. I hate NetLogo.
     Public Domain
 
 2011-02-01
-  Python sockslist.net Scraper
-    Got bored, made this. Thanks, Cam.
+  Python
+  sockslist.net Proxy Scraper
+    Got bored, Cam had me make this. Thanks, Cam.
     Proxies.py is by me.
     socklist.py belongs to Cam1337.
+
+2011-02-11
+  Python
+  lovinghistory.org Homework Web Scraper
+    This took way longer than expected. Weird HTML tags.
+    Used some code from the Proxy one. Might see some similarities.
+    I really really need to learn regular expressions.
+    Thanks, symetrik, for those ~40 characters. :P
