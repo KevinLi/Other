@@ -3,7 +3,6 @@
     <head>
         <title><3</title>
         <style type="text/css">
-        <!--/* Edit this */-->
         marquee {
             z-index:2;
             position:absolute;
