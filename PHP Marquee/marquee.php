@@ -16,11 +16,11 @@
     <body>
     <?php
     // Edit these
-    $times_to_spam = 10;
+    $times_to_spam = 15;
     $text = "&lt;3";
     // 
     function marquee($var0) {
-        echo "<marquee style=\"left:" . rand(0,150) . "; top:" . rand(0,115) . "; height:" . rand(0,500) . ";\" scrollamount=\"". rand(0,10) . "\" direction=\"down\">" . $var0 . "</marquee>\n";
+        echo "<marquee style=\"left:" . rand(10,1000) . "; top:" . rand(0,20) . "; height:" . rand(250,500) . ";\" scrollamount=\"". rand(0,10) . "\" direction=\"down\">" . $var0 . "</marquee>\n";
     }
     for( $i = 0; $i < $times_to_spam; $i++ ) {
         marquee($text);
