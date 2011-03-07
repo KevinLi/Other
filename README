@@ -9,17 +9,7 @@ sockslist.net Proxy Scraper - Python
     Got bored, Cam had me make this. Thanks, Cam.
     Proxies.py is by me.
     socklist.py belongs to Cam1337.
-
-
-lovinghistory.org Homework Scraper - Python
-  2011-02-11
-    This took longer than expected. Weird HTML tags. Plafker, I am disappoint.
-    Used some code from the Proxy one. Might see some similarities.
-    I really really need to learn regular expressions.
-    Thanks, symetrik, for those ~30 characters. :P
-  2011-02-14
-    Okay, it doesn't work anymore.
-    I'll probably update it again once I learn regex.
+	
 
 Marquee - PHP
   2011-02-17
