@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 __module_name__ = "invitespam.py"
-__module_version__ = "1.0.0.6"
+__module_version__ = "1.0.0.0"
 __module_description__ = "Joins a user to a specified number of randomly \
 						 named channels, invites a different user to them, \
 						 and parts the first user from all of them."
@@ -17,9 +17,10 @@ def main(word, word_eol, userdata):
 		create_channels(int(word[2]))
 		for i in channels:
 			xchat.command("JOIN {0}".format(i))			
-			xchat.command("INVITE {0}".format(word[1]))
+			xchat.command("INVITE {0} {1}".format(word[1], i))
 			xchat.command("PART {0}".format(i))
 		del channels[:]
+	return None
 	
 def create_channels(number):
 	for i in range(number):
