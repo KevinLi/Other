@@ -4,7 +4,7 @@ __module_version__ = "1.0.0.6"
 __module_description__ = "Joins a user to a specified number of randomly \
 						 named channels, invites a different user to them, \
 						 and parts the first user from all of them."
-__module_author__ = "banhammer"
+__module_author__ = "Kevin Li"
 
 import xchat
 import random
@@ -19,6 +19,7 @@ def main(word, word_eol, userdata):
 			xchat.command("JOIN {0}".format(i))			
 			xchat.command("INVITE {0}".format(word[1]))
 			xchat.command("PART {0}".format(i))
+		del channels[:]
 	
 def create_channels(number):
 	for i in range(number):
