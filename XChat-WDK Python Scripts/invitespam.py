@@ -8,6 +8,7 @@ __module_author__ = "Kevin Li"
 
 import xchat
 import random
+import time
 
 channels = []
 random.seed()
@@ -16,7 +17,8 @@ def main(word, word_eol, userdata):
 	if int(word[2]) <= 15:
 		create_channels(int(word[2]))
 		for i in channels:
-			xchat.command("JOIN {0}".format(i))			
+			xchat.command("JOIN {0}".format(i))
+			time.sleep(1)
 			xchat.command("INVITE {0} {1}".format(word[1], i))
 			xchat.command("PART {0}".format(i))
 		del channels[:]
