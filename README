@@ -9,15 +9,21 @@ sockslist.net Proxy Scraper - Python
     Got bored, Cam had me make this. Thanks, Cam.
     Proxies.py is by me.
     socklist.py belongs to Cam1337.
-	
+    
 
 Marquee - PHP
   2011-02-17
     Threw some PHP together with what I know.
     Challenged by horkhorkhork.
     Thanks, doc, runner.
-	
+    
 Meme Generator - Python
   2011-02-22
-	Made this a while ago. Date modified says 2010-01-23.
-	It works, but needs more variety.
+    Made this a while ago. Date modified says 2010-01-23.
+    It works, but needs more variety.
+
+Lyrics - Python
+  2012-09-16
+    Module to get lyrics from MetroLyrics.com.
+    Falls back to AZLyrics.com and Lyrics.com if not accessible at MetroLyrics.
+    Playing around with parsing webpages. Hacked up in twenty minutes or so.
